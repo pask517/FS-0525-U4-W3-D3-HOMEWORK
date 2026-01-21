@@ -4,6 +4,7 @@ import andreapascarella.enums.EventType;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -34,6 +35,9 @@ public class Event {
     @ManyToOne
     @JoinColumn(name = "location_id", nullable = false)
     private Location eventLocation;
+
+    @OneToMany(mappedBy = "eventParticipation")
+    private List<Participation> allParticipations;
 
     public Event() {
     }

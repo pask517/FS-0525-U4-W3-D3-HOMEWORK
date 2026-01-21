@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79558df-501d-4ca6-89e8-99356bd9bec6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/dao/LocationsDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/exceptions/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/dao/ParticipationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/dao/PersonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/andreapascarella/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/andreapascarella/dao/EventsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/dao/EventsDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/andreapascarella/entities/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/entities/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/andreapascarella/entities/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/entities/Location.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/andreapascarella/entities/Participation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/entities/Participation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/andreapascarella/entities/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/entities/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/andreapascarella/enums/StateType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/andreapascarella/enums/StateType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

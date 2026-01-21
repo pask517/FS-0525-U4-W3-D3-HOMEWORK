@@ -14,6 +14,7 @@ public class Person {
 
     @Id
     @GeneratedValue
+    @Column(name = "person_id")
     private UUID id;
 
     @Column(nullable = false)
@@ -32,18 +33,58 @@ public class Person {
     @Enumerated(EnumType.STRING)
     private GenderType genderType;
 
-    @OneToMany(mappedBy = )
+    @OneToMany(mappedBy = "owner")
     private List<Participation> participations;
 
-     public Person(){
-     }
+    public Person() {
+    }
 
-     public Person(String name,String surname,String email,LocalDate birthDate,GenderType genderType){
-         this.name=name;
-         this.surname=surname;
-         this.email=email;
-         this.birthDate=birthDate;
-         this.genderType=genderType;
-     }
+    public Person(String name, String surname, String email, LocalDate birthDate, GenderType genderType) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.birthDate = birthDate;
+        this.genderType = genderType;
+    }
 
+    public UUID getPersonId() {
+        return id;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public GenderType getGenderType() {
+        return genderType;
+    }
+
+    public List<Participation> getParticipations() {
+        return participations;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                ", birthDate=" + birthDate +
+                ", genderType=" + genderType +
+                ", participations=" + participations +
+                '}';
+    }
 }
