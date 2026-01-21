@@ -4,16 +4,16 @@ import andreapascarella.enums.EventType;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
-
 @Table(name = "events")
 public class Event {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     @Column(name = "event_id")
-    private long id;
+    private UUID eventId;
 
     @Column(name = "title", nullable = false)
     private String title;
@@ -31,25 +31,24 @@ public class Event {
     @Column(name = "maxParticipants", nullable = false)
     private int maxNumberOfParticipants;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "location_id", nullable = false)
-    private Location location;
+    private Location eventLocation;
 
     public Event() {
     }
 
-    public Event(String title, LocalDate eventDate, String description, EventType eventType, int maxNumberOfPartecipants, Location location) {
+    public Event(String title, LocalDate eventDate, String description, EventType eventType, int maxNumberOfPartecipants, Location eventLocation) {
         this.title = title;
         this.eventDate = eventDate;
         this.description = description;
         this.eventType = eventType;
         this.maxNumberOfParticipants = maxNumberOfPartecipants;
-        this.location = location;
-
+        this.eventLocation = eventLocation;
     }
 
-    public long getId() {
-        return id;
+    public UUID getEventId() {
+        return eventId;
     }
 
     public String getTitle() {
@@ -92,23 +91,20 @@ public class Event {
         this.maxNumberOfParticipants = maxNumberOfParticipants;
     }
 
+    public Location getLocation() {
+        return eventLocation;
+    }
+
     @Override
     public String toString() {
         return "Event{" +
-                "id=" + id +
+                "eventId=" + eventId +
                 ", title='" + title + '\'' +
                 ", eventDate=" + eventDate +
                 ", description='" + description + '\'' +
                 ", eventType=" + eventType +
                 ", maxNumberOfParticipants=" + maxNumberOfParticipants +
+                ", eventLocation=" + eventLocation +
                 '}';
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 }

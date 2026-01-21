@@ -32,7 +32,18 @@ public class Person {
     @Enumerated(EnumType.STRING)
     private GenderType genderType;
 
-    @Column
+    @OneToMany(mappedBy = )
     private List<Participation> participations;
+
+     public Person(){
+     }
+
+     public Person(String name,String surname,String email,LocalDate birthDate,GenderType genderType){
+         this.name=name;
+         this.surname=surname;
+         this.email=email;
+         this.birthDate=birthDate;
+         this.genderType=genderType;
+     }
 
 }

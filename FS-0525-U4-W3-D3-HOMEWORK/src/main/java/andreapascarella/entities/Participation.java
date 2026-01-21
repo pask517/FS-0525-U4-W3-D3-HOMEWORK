@@ -13,10 +13,11 @@ public class Participation {
     @GeneratedValue
     private UUID id;
 
-    @Column(nullable = false)
+    @ManyToOne
+    @JoinColumn
     private Person person;
 
-    @Column(nullable = false)
+    @ManyToOne()
     private Event event;
 
     @Column(nullable = false)

@@ -12,7 +12,7 @@ public class Location {
     @Id
     @GeneratedValue
     @Column(name = "location_id")
-    private UUID id;
+    private UUID locationId;
 
     @Column(nullable = false)
     private String name;
@@ -20,7 +20,7 @@ public class Location {
     @Column(nullable = false)
     private String city;
 
-    @OneToMany(mappedBy = "location")
+    @OneToMany(mappedBy = "eventLocation")
     private List<Event> events;
 
     public Location() {
@@ -49,5 +49,18 @@ public class Location {
 
     public List<Event> getEvents() {
         return events;
+    }
+
+    public UUID getLocationId() {
+        return locationId;
+    }
+
+    @Override
+    public String toString() {
+        return "Location{" +
+                "locationId=" + locationId +
+                ", name='" + name + '\'' +
+                ", city='" + city + '\'' +
+                '}';
     }
 }
